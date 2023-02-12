@@ -107,3 +107,8 @@ button {
     height: 1.8rem;
     box-shadow: grey 0 0 4px;
 }
+
+#lowerBracket p {
+    text-align: left;
+    margin-bottom: 20px;
+}
