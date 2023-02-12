@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
   </head>
   <body>
+    <span></span>
     <div id="image">
       <div id="headline">
         <div id="logo"></div>
@@ -38,39 +39,70 @@
             <p>Let's do this!</p>
             <div id="formRow1" class="formRow">
                 <div id="row1column1" class="formElement">
-                <label for="fName">First Name</label>
-                <input type="text" id="fName">
+                <label for="fName">First Name*</label>
+                <input 
+                    type="text" 
+                    id="fName" 
+                    required 
+                    minlength="2"
+                    placeholder="Goosetav">
+                <span></span>
                 </div>
                 <div id="row1column2" class="formElement">
-                <label for="lName">Last Name</label>
-                <input type="text" id="lName">
+                <label for="lName">Last Name*</label>
+                <input 
+                    type="text" 
+                    id="lName" 
+                    required
+                    minlength="2"
+                    placeholder="Goosemeyer">
+                <span></span>
                 </div>
             </div>
             <div id="formRow2" class="formRow">
                 <div id="row2column1" class="formElement">
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <label for="email">Email*</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        required
+                        placeholder="goose@gooseworld.com"
+                        >
+                    <span></span>
                 </div>
                 <div id="row2column2" class="formElement"> 
                     <label for="telNum">Phone Number</label>
-                    <input type="tel" id="telNum">
+                    <input 
+                        type="tel" 
+                        id="telNum">
+                    <span></span>
                 </div>
             </div>
             <div id="formRow3" class="formRow">
                 <div id="row3column1" class="formElement">
-                    <label for="password">Password</label>
-                    <input type="password">
+                    <label for="password">Password*</label>
+                    <input 
+                        type="password" 
+                        required
+                        placeholder="iLoveGoose123!">
+                    <span></span>
                 </div>
                 <div id="row3column2" class="formElement">
-                    <label for="confirmpwd">Confirm Password</label>
-                    <input type="password">
+                    <label for="confirmpwd">Confirm Password*</label>
+                    <input 
+                        type="password"  
+                        required
+                        placeholder="iLoveGoose123!">
+                    <span></span>
                 </div>
             </div>
+            <p>required fields are marked with an *</p>
         </form>
         <div id="lowerBracket">
             <button type="submit" form="signUpForm">Create Account</button>
             <p>Already have an Account? <a href=".">Log In</a></p>
         </div>
     </div>
+    <span></span>
   </body>
 </html>
