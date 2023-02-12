@@ -45,7 +45,8 @@
                     id="fName" 
                     required 
                     minlength="2"
-                    placeholder="Goosetav">
+                    placeholder="Goosetav"
+                    title="Your name should be at least 2 characters long.">
                 <span></span>
                 </div>
                 <div id="row1column2" class="formElement">
@@ -55,7 +56,8 @@
                     id="lName" 
                     required
                     minlength="2"
-                    placeholder="Goosemeyer">
+                    placeholder="Goosemeyer"
+                    title="Your last name should be at least 2 characters long">
                 <span></span>
                 </div>
             </div>
@@ -66,7 +68,9 @@
                         type="email" 
                         id="email" 
                         required
-                        placeholder="goose@gooseworld.com"
+                        placeholder="goosemeyer@web.com"
+                        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                        title="Please type a valid email adress"
                         >
                     <span></span>
                 </div>
@@ -84,7 +88,9 @@
                     <input 
                         type="password" 
                         required
-                        placeholder="iLoveGoose123!">
+                        placeholder="iLoveGoose123!"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                        title="Your Password should have at least 8 characters including 1 capital letter, 1 number and 1 special character.">
                     <span></span>
                 </div>
                 <div id="row3column2" class="formElement">
@@ -92,7 +98,9 @@
                     <input 
                         type="password"  
                         required
-                        placeholder="iLoveGoose123!">
+                        placeholder="iLoveGoose123!"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                        title="Your Password should have at least 8 characters including 1 capital letter, 1 number and 1 special character.">
                     <span></span>
                 </div>
             </div>
