@@ -108,7 +108,18 @@ button {
     box-shadow: grey 0 0 4px;
 }
 
+button:hover {
+    background-color: rgb(255,213,128);
+}
+
+button:active {
+    background-color: orange;
+}
 #lowerBracket p {
     text-align: left;
     margin-bottom: 20px;
+}
+
+a {
+    color: black
 }
