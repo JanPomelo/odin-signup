@@ -55,6 +55,7 @@ form {
     background-color: white;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    gap: 8px;
 }
 
 .formElement {
@@ -70,7 +71,21 @@ form {
 #formContainer {
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: #F8F8F8
+
+}
+
+form p {
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.formElement label {
+    font-family: "Roboto Mono";
+    font-size: 0.7rem;
+    text-transform: uppercase;
+	color: rgb(80,80,80);
+    margin-bottom: 2px;
 }
 
 #formContainer > div, form {
