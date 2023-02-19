@@ -17,7 +17,11 @@ body {
 h1 {
     padding: 0;
 }
-
+.pwdIncorrect {
+    font-weight: 700;
+    font-size: 1rem;
+    color: red;
+}
 #logo {
     background-image: url(../img/goosi-removebg-preview.png);
     background-size: 100%;

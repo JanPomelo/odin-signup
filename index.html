@@ -35,7 +35,7 @@
             Sign up <i>now</i> to get started.</p>
             <p>You <i>know</i> you want to.</p>
         </div>
-        <form action="submit" id="signUpForm" onsubmit="validatePWD()">
+        <form action="submit" id="signUpForm">
             <p>Let's do this!</p>
             <div id="formRow1" class="formRow">
                 <div id="row1column1" class="formElement">
@@ -69,7 +69,6 @@
                         id="email" 
                         required
                         placeholder="goosemeyer@web.com"
-                        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                         title="Please type a valid email adress"
                         >
                     <span></span>
@@ -88,6 +87,7 @@
                     <input 
                         type="password" 
                         id="password"
+                        name="password"
                         required
                         placeholder="iLoveGoose123!"
                         pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
@@ -99,6 +99,7 @@
                     <input 
                         type="password"  
                         id="confirmpwd"
+                        name="confirmpwd"
                         required
                         placeholder="iLoveGoose123!"
                         pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
@@ -106,6 +107,7 @@
                     <span></span>
                 </div>
             </div>
+            <p id="pwdFalse"></p>
             <p>required fields are marked with an *</p>
         </form>
         <div id="lowerBracket">
@@ -116,16 +118,25 @@
     <span></span>
   </body>
   <script>
-  
-    function validatePWD() {
-      let pwd = document.getElementById('password').innerHTML;
-      let pwdConfirm = document.getElementById('confirmpwd').innerHTML;
+    let form = document.getElementById('signUpForm');
+    let pwdNotif = document.getElementById('pwdFalse'); 
+       function validatePWD() {
+      let pwd = form.password.value;
+      let pwdConfirm = form.confirmpwd.value;
       if (pwd !== pwdConfirm) {
-        console.log('HAAALLOO!!')
       }
-      console.log(pwd);
-      console.log(pwdConfirm);
       return false;
+    }
+
+    form.onsubmit = function() {
+      if (validatePWD() == false) {
+        pwdNotif.innerText = "Sorry! The passwords don\'t match!";
+        pwdNotif.classList.add('pwdIncorrect');
+        return false;
+      }
+      pwdNotif.innerText = '';
+      return true;
+  
     }
   </script>
 </html>
