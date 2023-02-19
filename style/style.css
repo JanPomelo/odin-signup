@@ -65,17 +65,21 @@ form {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
 }
 .formRow {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    width: 100%;
+    
 }
 
 #formContainer {
     display: flex;
     flex-direction: column;
     background-color: #F8F8F8;
+
 }
 
 form :first-child {
@@ -107,9 +111,10 @@ button {
     border: 2px solid orange;
     border-radius: 5px;
     background-color: white;
-    width: 8rem;
-    height: 1.8rem;
+    width: 10rem;
+    height: 2.5rem;
     box-shadow: grey 0 0 4px;
+    color: black;
 }
 
 form :last-child {
@@ -192,5 +197,8 @@ input:valid:required {
     }
     #noRealService p {
         margin-bottom: 10%;
+    }
+    .formRow {
+        width: auto;
     }
 }
